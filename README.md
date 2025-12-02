@@ -1,8 +1,10 @@
-advent-of-code-2025
+# advent-of-code-2025
 
-A well-organized Python project structure for solving daily coding puzzles.
-Project Structure
-puzzle-solver/
+A well-organized Python project structure for solving daily coding puzzles of [Advent Of Code 2025](https://adventofcode.com/2025).  
+  
+## Project Structure
+``` bash
+advent-of-code-2025/
 ├── main.py              # Main entry point to run puzzles
 ├── setup_day.py         # Script to create new day directories
 ├── day01/
@@ -16,25 +18,29 @@ puzzle-solver/
 │   └── ...
 └── day25/
     └── ...
-Quick Start
-1. Setup a New Day
-Create the directory structure for a new puzzle day:
-bashpython setup_day.py 1
+``` 
+    
+## Quick Start
+### 1. Setup a New Day 
+Create the directory structure for a new puzzle day:  
+``` bash
+python setup_day.py 1
+```
 This creates:
+- day01/ directory
+- puzzle1.py and puzzle2.py with solution templates
+- sample1.txt, sample2.txt for test inputs
+- input.txt for the actual puzzle input
 
-day01/ directory
-puzzle1.py and puzzle2.py with solution templates
-sample1.txt, sample2.txt for test inputs
-input.txt for the actual puzzle input
+### 2. Add Your Inputs
 
-2. Add Your Inputs
-
-Copy the sample input(s) from the puzzle into sample1.txt, sample2.txt, etc.
+Copy the sample input(s) from the puzzle into sample1.txt, sample2.txt, etc.  
 Copy your actual puzzle input into input.txt
 
-3. Implement Your Solution
-Edit day01/puzzle1.py:
-pythondef parse_input(input_data: str):
+### 3. Implement Your Solution
+Edit day01/puzzle1.py:  
+```python
+def parse_input(input_data: str):
     """Parse the input into a usable format."""
     lines = input_data.strip().split('\n')
     return [int(line) for line in lines]
@@ -47,24 +53,37 @@ def solve(input_data: str):
     result = sum(data)
     
     return result
-4. Test with Sample Input
+```
+### 4. Test with Sample Input
 Run your solution against the sample input:
-bashpython main.py 1 1 sample1.txt
+``` bash
+python main.py 1 1 sample1.txt
+```
+
 You can also test directly within the puzzle file:
-bashpython day01/puzzle1.py
-5. Solve with Real Input
+``` bash
+python day01/puzzle1.py
+```
+### 5. Solve with Real Input
 Once your solution works with the sample:
-bashpython main.py 1 1 input.txt
-Usage
-bashpython main.py <day> <puzzle_id> <input_file>
-Arguments:
+``` bash
+python main.py 1 1 input.txt
+```
 
-day: Day number (1-25)
-puzzle_id: Puzzle identifier (1 or 2)
-input_file: Input filename (e.g., input.txt, sample1.txt)
+## Usage
+```bash
+python main.py <day> <puzzle_id> <input_file>
+```
 
-Examples:
-bash# Run day 1, puzzle 1 with sample input
+## Arguments:
+
+- day: Day number (1-25)  
+- puzzle_id: Puzzle identifier (1 or 2)  
+- input_file: Input filename (e.g., input.txt, sample1.txt)  
+
+## Examples: (Run day 1, puzzle 1 with sample input)
+``` bash
+# Run day 1, puzzle 1 with sample input
 python main.py 1 1 sample1.txt
 
 # Run day 1, puzzle 1 with actual input
@@ -72,9 +91,12 @@ python main.py 1 1 input.txt
 
 # Run day 5, puzzle 2 with second sample
 python main.py 5 2 sample2.txt
-Puzzle Template Structure
+```
+
+## Puzzle Template Structure
 Each puzzle file has this structure:
-pythondef parse_input(input_data: str):
+``` python
+def parse_input(input_data: str):
     """Parse the raw input string."""
     # Convert input to usable format
     pass
@@ -93,15 +115,18 @@ if __name__ == "__main__":
     result = solve(sample_input)
     assert result == expected_result
     print("✓ Sample test passed!")
-Tips
+```
 
-Testing: Use the if __name__ == "__main__" block in puzzle files for quick inline testing
-Multiple Samples: Create sample1.txt, sample2.txt, etc. for different test cases
-Debugging: Add print statements in your solution and run specific samples
-Reusability: Put common utility functions in a separate utils.py file
+## Tips
 
-Example Workflow
-bash# Day 1 arrives
+- Testing: Use the if __name__ == "__main__" block in puzzle files for quick inline testing  
+- Multiple Samples: Create sample1.txt, sample2.txt, etc. for different test cases  
+- Debugging: Add print statements in your solution and run specific samples  
+- Reusability: Put common utility functions in a separate utils.py file  
+
+## Example Workflow
+``` bash
+# Day 1 arrives
 python setup_day.py 1
 
 # Add sample input from puzzle description
@@ -121,3 +146,4 @@ python main.py 1 1 input.txt
 # Edit day01/puzzle2.py
 python main.py 1 2 sample1.txt
 python main.py 1 2 input.txt
+```
