@@ -81,7 +81,7 @@ python main.py <day> <puzzle_id> <input_file>
 - puzzle_id: Puzzle identifier (1 or 2)  
 - input_file: Input filename (e.g., input.txt, sample1.txt)  
 
-## Examples: (Run day 1, puzzle 1 with sample input)
+## Examples:
 ``` bash
 # Run day 1, puzzle 1 with sample input
 python main.py 1 1 sample1.txt
