@@ -1,10 +1,10 @@
-# advent-of-code-2025
+# advent-of-code-2024
 
-A well-organized Python project structure for solving daily coding puzzles of [Advent Of Code 2025](https://adventofcode.com/2025).  
+A well-organized Python project structure for solving daily coding puzzles of [Advent Of Code 2024](https://adventofcode.com/2024).  
   
 ## Project Structure
 ``` bash
-advent-of-code-2025/
+advent-of-code-2024/
 ├── main.py              # Main entry point to run puzzles
 ├── setup_day.py         # Script to create new day directories
 ├── day01/
